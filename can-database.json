@@ -1,0 +1,278 @@
+{
+    "messages": [
+        {
+            "id": "0x0CF11E05",
+            "name": "Kelly-MC1-MSG1",
+            "period": 50,
+            "is_big_endian": true,
+            "signals": [
+                {
+                    "name": "SpeedLSB",
+                    "start_bit": 0,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": 0,
+                    "unit": "RPM",
+                    "description": "LSB of speed in RPM"
+                },
+                {
+                    "name": "SpeedMSB",
+                    "start_bit": 8,
+                    "length": 8,
+                    "factor": 256.0,
+                    "offset": 0,
+                    "unit": "RPM",
+                    "description": "MSB of speed in RPM"
+                },
+                {
+                    "name": "MotorCurrentLSB",
+                    "start_bit": 16,
+                    "length": 8,
+                    "factor": 0.1,
+                    "offset": 0,
+                    "unit": "A",
+                    "description": "LSB of motor current"
+                },
+                {
+                    "name": "MotorCurrentMSB",
+                    "start_bit": 24,
+                    "length": 8,
+                    "factor": 25.6,
+                    "offset": 0,
+                    "unit": "A",
+                    "description": "MSB of motor current"
+                },
+                {
+                    "name": "BatteryVoltageLSB",
+                    "start_bit": 32,
+                    "length": 8,
+                    "factor": 0.1,
+                    "offset": 0,
+                    "unit": "V",
+                    "description": "LSB of battery voltage"
+                },
+                {
+                    "name": "BatteryVoltageMSB",
+                    "start_bit": 40,
+                    "length": 8,
+                    "factor": 25.6,
+                    "offset": 0,
+                    "unit": "V",
+                    "description": "MSB of battery voltage"
+                },
+                {
+                    "name": "ErrorCodeLSB",
+                    "start_bit": 48,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": 0,
+                    "bit_fields": [
+                        {
+                            "start_bit": 0,
+                            "length": 1,
+                            "description": "ERR 0"
+                        },
+                        {
+                            "start_bit": 1,
+                            "length": 1,
+                            "description": "ERR 1"
+                        },
+                        {
+                            "start_bit": 2,
+                            "length": 1,
+                            "description": "ERR 2"
+                        },
+                        {
+                            "start_bit": 3,
+                            "length": 1,
+                            "description": "ERR 3"
+                        },
+                        {
+                            "start_bit": 4,
+                            "length": 1,
+                            "description": "ERR 4"
+                        },
+                        {
+                            "start_bit": 5,
+                            "length": 1,
+                            "description": "ERR 5"
+                        },
+                        {
+                            "start_bit": 6,
+                            "length": 1,
+                            "description": "ERR 6"
+                        },
+                        {
+                            "start_bit": 7,
+                            "length": 1,
+                            "description": "ERR 7"
+                        }
+                    ],
+                    "description": "LSB of error code"
+                },
+                {
+                    "name": "ErrorCodeMSB",
+                    "start_bit": 56,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": 0,
+                    "bit_fields": [
+                        {
+                            "start_bit": 0,
+                            "length": 1,
+                            "description": "ERR 8"
+                        },
+                        {
+                            "start_bit": 1,
+                            "length": 1,
+                            "description": "ERR 9"
+                        },
+                        {
+                            "start_bit": 2,
+                            "length": 1,
+                            "description": "ERR 10"
+                        },
+                        {
+                            "start_bit": 3,
+                            "length": 1,
+                            "description": "ERR 11"
+                        },
+                        {
+                            "start_bit": 4,
+                            "length": 1,
+                            "description": "ERR 12"
+                        },
+                        {
+                            "start_bit": 5,
+                            "length": 1,
+                            "description": "ERR 13"
+                        },
+                        {
+                            "start_bit": 6,
+                            "length": 1,
+                            "description": "ERR 14"
+                        },
+                        {
+                            "start_bit": 7,
+                            "length": 1,
+                            "description": "ERR 15"
+                        }
+                    ],
+                    "description": "MSB of error code"
+                }
+            ]
+        },
+        {
+            "id": "0x0CF11F05",
+            "name": "Kelly-MC1-MSG2",
+            "period": 50,
+            "signals": [
+                {
+                    "name": "ThrottleSignal",
+                    "start_bit": 0,
+                    "length": 8,
+                    "factor": 0.0196,
+                    "offset": 0,
+                    "unit": "V",
+                    "description": "Throttle signal, 0~255 maps to 0~5V"
+                },
+                {
+                    "name": "ControllerTemperature",
+                    "start_bit": 8,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": -40,
+                    "unit": "C",
+                    "description": "Controller temperature, actual temperature = value - 40"
+                },
+                {
+                    "name": "MotorTemperature",
+                    "start_bit": 16,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": -30,
+                    "unit": "C",
+                    "description": "Motor temperature, actual temperature = value - 30"
+                },
+                {
+                    "name": "Reserved",
+                    "start_bit": 24,
+                    "length": 8,
+                    "description": "Reserved"
+                },
+                {
+                    "name": "StatusOfController",
+                    "start_bit": 32,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": 0,
+                    "bit_fields": [
+                        {
+                            "start_bit": 0,
+                            "length": 2,
+                            "description": "Status of Command"
+                        },
+                        {
+                            "start_bit": 2,
+                            "length": 2,
+                            "description": "Status of feedback"
+                        },
+                        {
+                            "start_bit": 4,
+                            "length": 4,
+                            "description": "Reserved"
+                        }
+                    ],
+                    "description": "Status of Controller"
+                },
+                {
+                    "name": "StatusOfSwitchSignal",
+                    "start_bit": 40,
+                    "length": 8,
+                    "factor": 1.0,
+                    "offset": 0,
+                    "bit_fields": [
+                        {
+                            "start_bit": 0,
+                            "length": 3,
+                            "description": "Hall A-B-C signal status"
+                        },
+                        {
+                            "start_bit": 4,
+                            "length": 1,
+                            "description": "Backward switch"
+                        },
+                        {
+                            "start_bit": 5,
+                            "length": 1,
+                            "description": "Forward switch"
+                        },
+                        {
+                            "start_bit": 6,
+                            "length": 1,
+                            "description": "Foot Switch"
+                        },
+                        {
+                            "start_bit": 7,
+                            "length": 1,
+                            "description": "Boost Switch"
+                        }
+                    ],
+                    "description": "Status of Controller"
+                },
+                {
+                    "name": "Reserved",
+                    "start_bit": 48,
+                    "length": 8,
+                    "description": "Reserved"
+                },
+                {
+                    "name": "Reserved",
+                    "start_bit": 56,
+                    "length": 8,
+                    "description": "Reserved"
+                }
+            ]
+        }
+    ]
+}
